@@ -1,0 +1,6 @@
+#!/usr/bin/fish
+
+set PROJECT_NAME (basename (pwd))
+
+tmux new -A -s $PROJECT_NAME \; split-window -v \; split-window -h \; resize-pane -t 1 -y 10 \; send-keys -t 0 "vim -c NERDTree" C-m
+
